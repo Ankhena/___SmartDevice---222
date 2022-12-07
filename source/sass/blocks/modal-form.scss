@@ -1,0 +1,211 @@
+.modal-window {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: none;
+  background: rgba(3, 16, 27, 0.7);
+}
+
+.modal-window__wrapper {
+  width: 500px;
+  min-height: 610px;
+  background: $main-blue;
+  padding: 40px;
+  position: absolute;
+  top: 146px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.modal-window__wrapper span {
+  @include header-font-regular;
+
+  display: block;
+  font-size: 30px;
+  line-height: 42px;
+  letter-spacing: 0;
+  text-align: left;
+  color: $text-white;
+  margin: 0 0 15px;
+}
+
+.modal-window__wrapper p {
+  @include common-font-regular;
+
+  display: block;
+  max-width: 400px;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0;
+  text-align: left;
+  color: $text-white;
+  margin: 0 0 40px;
+}
+
+.modal-window__wrapper > input {
+  @include common-font-regular;
+
+  display: block;
+  height: 50px;
+  width: 100%;
+  border-radius: 3px;
+  background: rgba(4, 20, 39, 0.15);
+  border: 0;
+  outline: none;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  padding: 15px 13px;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0;
+  text-align: left;
+  color: $text-white;
+
+  &::placeholder {
+    @include common-font-regular;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0;
+    text-align: left;
+    color: $text-white;
+  }
+}
+
+.modal-window__wrapper textarea {
+  @include common-font-regular;
+
+  height: 155px;
+  width: 100%;
+  border-radius: 3px;
+  background: rgba(4, 20, 39, 0.15);
+  border: 0;
+  outline: none;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+  padding: 25px 15px;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0;
+  text-align: left;
+  color: $text-white;
+
+  &::placeholder {
+    @include common-font-regular;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0;
+    text-align: left;
+    color: $text-white;
+  }
+}
+
+.modal-window__button {
+  @include header-font-bold;
+
+  height: 45px;
+  width: 100%;
+  border-radius: 3px;
+  background: $black-btn;
+  border: 0;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+  color: $text-white;
+}
+
+.modal-window__agreement-container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  position: relative;
+  margin: 20px 0 0;
+}
+
+.modal-window__agreement-container input {
+  visibility: hidden;
+}
+
+.modal-window__agreement-container label {
+  @include common-font-regular;
+
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0;
+  text-align: left;
+  color: $text-white;
+  margin: 0 0 0 16px;
+  align-self: center;
+}
+
+.modal-window__agreement-container label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  border-radius: 3px;
+  top: 50%;
+  left: 6px;
+  transform: translate(0, -50%);
+  background: transparent;
+  width: 15px;
+  height: 14px;
+  border: 1px solid $text-white;
+  justify-self: center;
+}
+
+.modal-window__agreement-container input:checked ~ .modal-window__label::after {
+  content: "";
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  top: 50%;
+  left: 6px;
+  transform: translate(0, -50%);
+  background: url("../img/svg/checkmark.svg") no-repeat 50% 50%;
+  width: 15px;
+  height: 14px;
+  justify-self: center;
+}
+
+.modal-window__close {
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+.modal-window__close::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  transform: rotate(135deg);
+  background: $text-white;
+  top: 40px;
+  right: 40px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.modal-window__close::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  transform: rotate(45deg);
+  background: $text-white;
+  top: 40px;
+  right: 40px;
+  z-index: 1;
+  cursor: pointer;
+}

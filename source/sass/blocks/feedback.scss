@@ -1,0 +1,44 @@
+.feedback {
+  padding: 165px 20px 250px;
+  background: linear-gradient(139deg, rgba(4, 24, 39, 0.5) 33.8%, transparent 33.8%), $main-blue;
+
+  @media (max-width: $desktop-width) {
+    min-width: 768px;
+    padding: 45px 50px 125px;
+    background: $main-blue;
+  }
+
+  @media (max-width: $tablet-width) {
+    min-width: 320px;
+    padding: 48px 25px 88px;
+  }
+}
+
+.feedback__container {
+  display: flex;
+  justify-content: space-between;
+  min-width: 984px;
+  max-width: 1220px;
+  margin: 0 auto;
+
+  @media (max-width: $desktop-width) {
+    display: block;
+    min-width: 668px;
+  }
+
+  @media (max-width: $tablet-width) {
+    min-width: 270px;
+  }
+}
+
+.feedback__airplane {
+  display: block;
+  margin: 28px 0 0;
+  min-width: 310px;
+  max-width: 510px;
+  height: auto;
+
+  @media (max-width: $desktop-width) {
+    display: none;
+  }
+}

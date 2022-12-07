@@ -1,0 +1,237 @@
+.goods {
+  padding: 65px 20px 144px;
+  background: $goods-bg;
+
+  @media (max-width: $desktop-width) {
+    padding: 18px 48px 75px 50px;
+  }
+
+  @media (max-width: $tablet-width) {
+    min-width: 320px;
+    padding: 20px 25px 86px;
+  }
+}
+
+.goods h2 {
+  @include header-font-regular;
+  font-size: 36px;
+  line-height: 51px;
+  letter-spacing: 0;
+  text-align: left;
+  color: $text-white;
+
+  @media (max-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 39px;
+  }
+}
+
+.goods__header--mobile {
+  display: none;
+
+  @media (max-width: $tablet-width) {
+    display: block;
+    padding-right: 10px;
+  }
+}
+
+.goods__header--tablet {
+  display: block;
+  min-width: 984px;
+  max-width: 1220px;
+  margin: 0 auto 50px;
+
+  @media (max-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.goods__list {
+  @include reset;
+  list-style-type: none;
+  min-width: 984px;
+  max-width: 1220px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 85px;
+  margin: 38px 0 0;
+
+  @media (max-width: $desktop-width) {
+    min-width: 668px;
+    grid-gap: 30;
+    grid-template-columns: 1fr;
+  }
+
+  @media (max-width: $tablet-width) {
+    min-width: 270px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.goods__item-link {
+  display: block;
+  position: relative;
+  max-width: 350px;
+  min-height: 650px;
+  padding: 50px 40px;
+
+  @media (max-width: $desktop-width) {
+    padding: 37px 44px;
+    max-width: 100%;
+    min-height: 250px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 25px 30px;
+    min-height: 250px;
+  }
+}
+
+.goods__item:not(:last-of-type) {
+  margin: 0;
+
+  @media (max-width: $desktop-width) {
+    margin-bottom: 30px;
+  }
+}
+
+.goods__item--first {
+  background-image: -webkit-image-set(url("../img/first-card-bg-desktop.png") 1x,
+      url("../img/first-card-bg-desktop@2x.png") 2x);
+  background-image: image-set(url("../img/first-card-bg-desktop.webp") type("image/webp") 1x,
+      url("../img/first-card-bg-desktop@2x.webp") type("image/webp") 2x,
+      url("../img/first-card-bg-desktop.png") 1x,
+      url("../img/first-card-bg-desktop@2x.png") 2x);
+  background-size: cover;
+  background-color: $substrate;
+
+  @media (max-width: $desktop-width) {
+    background-image: -webkit-image-set(url("../img/first-card-bg-tablet.png") 1x,
+        url("../img/first-card-bg-tablet@2x.png") 2x);
+    background-image: image-set(url("../img/first-card-bg-tablet.webp") type("image/webp") 1x,
+        url("../img/first-card-bg-tablet@2x.webp") type("image/webp") 2x,
+        url("../img/first-card-bg-tablet.png") 1x,
+        url("../img/first-card-bg-tablet@2x.png") 2x);
+    background-size: cover;
+  }
+
+  @media (max-width: $tablet-width) {
+    background-image: -webkit-image-set(url("../img/first-card-bg.png") 1x,
+        url("../img/first-card-bg@2x.png") 2x);
+    background-image: image-set(url("../img/first-card-bg.webp") type("image/webp") 1x,
+        url("../img/first-card-bg@2x.webp") type("image/webp") 2x,
+        url("../img/first-card-bg.png") 1x,
+        url("../img/first-card-bg@2x.png") 2x);
+    background-size: cover;
+  }
+}
+
+.goods__item--second {
+  background-size: cover;
+  // background: url("../img/second-card-bg-desktop.png") no-repeat;
+  background-image: -webkit-image-set(url("../img/second-card-bg-desktop.png") 1x,
+      url("../img/second-card-bg-desktop@2x.png") 2x);
+  background-image: image-set(url("../img/second-card-bg-desktop.webp") type("image/webp") 1x,
+      url("../img/second-card-bg-desktop@2x.webp") type("image/webp") 2x,
+      url("../img/second-card-bg-desktop.png") 1x,
+      url("../img/second-card-bg-desktop@2x.png") 2x);
+  background-size: cover;
+  background-color: $substrate;
+
+  @media (max-width: $desktop-width) {
+    background-image: -webkit-image-set(url("../img/second-card-bg-tablet.png") 1x,
+        url("../img/second-card-bg-tablet@2x.png") 2x);
+    background-image: image-set(url("../img/second-card-bg-tablet.webp") type("image/webp") 1x,
+        url("../img/second-card-bg-tablet@2x.webp") type("image/webp") 2x,
+        url("../img/second-card-bg-tablet.png") 1x,
+        url("../img/second-card-bg-tablet@2x.png") 2x);
+    background-size: cover;
+  }
+
+  @media (max-width: $tablet-width) {
+    background-image: -webkit-image-set(url("../img/second-card-bg.png") 1x,
+        url("../img/second-card-bg@2x.png") 2x);
+    background-image: image-set(url("../img/second-card-bg.webp") type("image/webp") 1x,
+        url("../img/second-card-bg@2x.webp") type("image/webp") 2x,
+        url("../img/second-card-bg.png") 1x,
+        url("../img/second-card-bg@2x.png") 2x);
+  }
+}
+
+.goods__item--second br {
+  display: block;
+
+  @media (max-width: $desktop-width) {
+    display: inline;
+  }
+}
+
+.goods__item--third {
+  background-image: -webkit-image-set(url("../img/third-card-bg-desktop.png") 1x,
+      url("../img/third-card-bg-desktop@2x.png") 2x);
+  background-image: image-set(url("../img/third-card-bg-desktop.webp") type("image/webp") 1x,
+      url("../img/third-card-bg-desktop@2x.webp") type("image/webp") 2x,
+      url("../img/third-card-bg-desktop.png") 1x,
+      url("../img/third-card-bg-desktop@2x.png") 2x);
+  background-size: cover;
+  background-color: $substrate;
+
+  @media (max-width: $desktop-width) {
+    background-image: -webkit-image-set(url("../img/third-card-bg-tablet.png") 1x,
+        url("../img/third-card-bg-tablet@2x.png") 2x);
+    background-image: image-set(url("../img/third-card-bg-tablet.webp") type("image/webp") 1x,
+        url("../img/third-card-bg-tablet@2x.webp") type("image/webp") 2x,
+        url("../img/third-card-bg-tablet.png") 1x,
+        url("../img/third-card-bg-tablet@2x.png") 2x);
+    background-size: cover;
+  }
+
+  @media (max-width: $tablet-width) {
+    background-image: -webkit-image-set(url("../img/third-card-bg.png") 1x,
+        url("../img/third-card-bg@2x.png") 2x);
+    background-image: image-set(url("../img/third-card-bg.webp") type("image/webp") 1x,
+        url("../img/third-card-bg@2x.webp") type("image/webp") 2x,
+        url("../img/third-card-bg.png") 1x,
+        url("../img/third-card-bg@2x.png") 2x);
+    background-size: cover;
+  }
+}
+
+.goods__item p {
+  @include header-font-regular;
+  @include reset;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0;
+  text-align: left;
+  color: $text-white;
+  max-width: 170px;
+
+  @media (max-width: $tablet-width) {
+    font-size: 18px;
+  }
+}
+
+.goods__arrow-icon {
+  position: absolute;
+  display: block;
+  align-items: center;
+  justify-items: center;
+  outline: none;
+  border: 0;
+  bottom: 0;
+  right: 0;
+  padding: 24px 27px;
+  border-radius: 3px 0 0 0;
+  background: $main-blue;
+  box-sizing: content-box;
+
+  @media (max-width: $tablet-width) {
+    padding: 14px 17px;
+  }
+}

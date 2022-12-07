@@ -1,0 +1,36 @@
+.footer {
+  padding: 50px 20px 65px;
+  background: $text-color;
+
+  @media (max-width: $desktop-width) {
+    min-width: 768px;
+    padding: 50px 50px 65px;
+  }
+
+  @media (max-width: $tablet-width) {
+    min-width: 320px;
+    padding: 35px 0;
+  }
+}
+
+.footer__container {
+  display: grid;
+  min-width: 984px;
+  max-width: 1220px;
+  margin: 0 auto;
+  grid-template-columns: 1.54fr 2fr 1.49fr;
+  grid-template-rows: repeat(6, 40px);
+  grid-auto-rows: minmax(40px, 50px);
+
+  @media (max-width: $desktop-width) {
+    min-width: 668px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-auto-rows: auto;
+  }
+
+  @media (max-width: $tablet-width) {
+    min-width: 270px;
+    grid-template-columns: 1fr;
+  }
+}

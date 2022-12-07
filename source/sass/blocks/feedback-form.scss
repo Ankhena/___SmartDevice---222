@@ -1,0 +1,252 @@
+.feedback-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  max-width: 590px;
+  padding: 0 10px 0 0;
+
+  @media (max-width: $desktop-width) {
+    max-width: 100%;
+  }
+
+  @media (max-width: $tablet-width) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.feedback-form h3 {
+  @include header-font-regular;
+
+  display: block;
+  font-size: 36px;
+  line-height: 51px;
+  letter-spacing: 0;
+  text-align: left;
+  color: $text-white;
+  margin: 0 0 10px -5px;
+  grid-column: 1/3;
+
+  @media (max-width: $desktop-width) {
+    margin: 0 0 7px;
+  }
+
+  @media (max-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 42px;
+    margin: 0 0 6px;
+    grid-column: 1/2;
+  }
+}
+
+.feedback-form p {
+  @include common-font-regular;
+
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0;
+  text-align: left;
+  color: $text-white;
+  margin: 0 0 35px;
+  grid-column: 1/3;
+
+  @media (max-width: $desktop-width) {
+    margin: 0 0 25px;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin: 0 0 35px;
+    font-size: 14px;
+    line-height: 19px;
+    grid-column: 1/2;
+  }
+}
+
+.feedback-form > input {
+  @include common-font-regular;
+
+  display: block;
+  height: 50px;
+  max-width: 275px;
+  border-radius: 3px;
+  background: rgba(4, 20, 39, 0.15);
+  border: 0;
+  outline: none;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  padding: 15px 13px;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0;
+  text-align: left;
+  color: $text-white;
+
+  &::placeholder {
+    @include common-font-regular;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0;
+    text-align: left;
+    color: $text-white;
+  }
+
+  @media (max-width: $desktop-width) {
+    width: 320px;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.feedback-form input:first-of-type {
+  grid-column: 1/2;
+}
+
+.feedback-form input:last-of-type {
+  grid-column: 2/3;
+  justify-self: end;
+
+  @media (max-width: $tablet-width) {
+    grid-column: 1/2;
+  }
+}
+
+.feedback-form textarea {
+  @include common-font-regular;
+
+  height: 180px;
+  width: 100%;
+  border-radius: 3px;
+  background: rgba(4, 20, 39, 0.15);
+  border: 0;
+  outline: none;
+  box-sizing: border-box;
+  margin-bottom: 23px;
+  padding: 25px 12px;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0;
+  text-align: left;
+  color: $text-white;
+  grid-column: 1/3;
+
+  &::placeholder {
+    @include common-font-regular;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0;
+    text-align: left;
+    color: $text-white;
+  }
+
+  @media (max-width: $desktop-width) {
+    height: 155px;
+    margin-bottom: 35px;
+    padding: 30px 15px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 20px 12px;
+    width: 100%;
+    grid-column: 1/2;
+  }
+}
+
+.feedback-form__button {
+  @include header-font-bold;
+
+  height: 45px;
+  border-radius: 3px;
+  background: $black-btn;
+  border: 0;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+  color: $text-white;
+  grid-column: 1/2;
+  width: 265px;
+  cursor: pointer;
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+  }
+}
+
+.feedback-form__agreement-wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+  margin: 15px 0 0 10px;
+  grid-column: 2/3;
+
+  @media (max-width: $desktop-width) {
+    margin: 0;
+    padding-left: 16px;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin: 25px 5px 0;
+    grid-column: 1/2;
+  }
+}
+
+.feedback-form__agreement-wrapper input {
+  visibility: hidden;
+}
+
+.feedback-form__agreement-wrapper label {
+  @include common-font-regular;
+
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0;
+  text-align: left;
+  color: $text-white;
+  margin: 0 0 0 36px;
+  align-self: center;
+
+  @media (max-width: $tablet-width) {
+    margin: 0 0 0 26px;
+  }
+}
+
+.feedback-form__agreement-wrapper label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  border-radius: 3px;
+  top: 50%;
+  left: 14px;
+  transform: translate(0, -60%);
+  background: transparent;
+  width: 15px;
+  height: 14px;
+  border: 1px solid $text-white;
+  justify-self: center;
+
+  @media (max-width: $tablet-width) {
+    left: 0;
+  }
+}
+
+.feedback-form__agreement-wrapper input:checked ~ .feedback-form__label::after {
+  content: "";
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  top: 50%;
+  left: 14px;
+  transform: translate(0, -60%);
+  background: url("../img/svg/checkmark.svg") no-repeat 50% 50%;
+  width: 15px;
+  height: 14px;
+  justify-self: center;
+
+  @media (max-width: $tablet-width) {
+    left: 0;
+  }
+}

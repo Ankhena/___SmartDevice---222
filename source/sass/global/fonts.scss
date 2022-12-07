@@ -1,0 +1,54 @@
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: $common-font;
+
+  font-display: swap;
+  src:
+    url("../fonts/PTMono-400.woff2") format("woff2"),
+    url("../fonts/PTMono-400.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: $common-font;
+
+  font-display: swap;
+  src:
+    url("../fonts/PTMono-700.woff2") format("woff2"),
+    url("../fonts/PTMono-700.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: $header-font;
+
+  font-display: swap;
+  src:
+    url("../fonts/RobotoCondensed-400.woff2") format("woff2"),
+    url("../fonts/RobotoCondensed-400.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: $header-font;
+
+  font-display: swap;
+  src:
+    url("../fonts/RobotoCondensed-700.woff2") format("woff2"),
+    url("../fonts/RobotoCondensed-700.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 500;
+  font-family: $secondary-slogan;
+
+  font-display: swap;
+  src:
+    url("../fonts/Roboto-500.woff2") format("woff2"),
+    url("../fonts/Roboto-500.woff") format("woff");
+}
